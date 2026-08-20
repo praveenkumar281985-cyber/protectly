@@ -228,8 +228,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f6f7f9] text-[#111827]">
 
-      {/* HEADER */}
-
       <header className="sticky top-0 z-30 border-b border-black/[0.05] bg-white/90 backdrop-blur-xl">
 
         <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
@@ -286,11 +284,7 @@ export default function Home() {
 
       </header>
 
-      {/* MAIN */}
-
       <div className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6 sm:py-8">
-
-        {/* HERO */}
 
         <section className="mb-6">
 
@@ -333,8 +327,6 @@ export default function Home() {
           </div>
 
         </section>
-
-        {/* STATS */}
 
         <section className="grid grid-cols-2 gap-3 sm:grid-cols-3">
 
@@ -387,8 +379,6 @@ export default function Home() {
           </div>
 
         </section>
-
-        {/* ALERTS */}
 
         <section className="mt-5 space-y-3">
 
@@ -457,8 +447,6 @@ export default function Home() {
           </div>
 
         </section>
-
-        {/* PURCHASES */}
 
         <section className="mt-7">
 
@@ -552,8 +540,6 @@ export default function Home() {
 
         </section>
 
-        {/* FOOTER */}
-
         <section className="mt-7 rounded-2xl bg-[#111827] p-5 text-white">
 
           <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-gray-400">
@@ -571,15 +557,15 @@ export default function Home() {
 
           <div className="mt-4 flex flex-wrap gap-3 text-[9px] text-gray-400">
             <span>🔒 Secure storage</span>
+            <span>•</span>
             <span>📄 Private documents</span>
+            <span>•</span>
             <span>🛡️ Protected</span>
           </div>
 
         </section>
 
       </div>
-
-      {/* PURCHASE SHEET */}
 
       {showPurchaseModal && (
 
@@ -594,8 +580,6 @@ export default function Home() {
               event.stopPropagation()
             }
           >
-
-            {/* SHEET HEADER */}
 
             <div className="shrink-0 border-b border-black/[0.06] px-5 pb-4 pt-3">
 
@@ -635,8 +619,6 @@ export default function Home() {
 
             </div>
 
-            {/* SHEET BODY */}
-
             <div className="overflow-y-auto px-5 py-5">
 
               {!purchaseMethod && (
@@ -656,8 +638,6 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-3">
-
-                    {/* INVOICE */}
 
                     <button
                       type="button"
@@ -688,8 +668,6 @@ export default function Home() {
                       </span>
 
                     </button>
-
-                    {/* MANUAL */}
 
                     <button
                       type="button"
@@ -734,8 +712,6 @@ export default function Home() {
                 </>
 
               )}
-
-              {/* INVOICE */}
 
               {purchaseMethod === 'invoice' && (
 
@@ -832,8 +808,6 @@ export default function Home() {
                 </>
 
               )}
-
-              {/* MANUAL */}
 
               {purchaseMethod === 'manual' && (
 

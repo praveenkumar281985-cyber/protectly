@@ -1,4 +1,3 @@
-```tsx
 'use client';
 
 import { FormEvent, useState } from 'react';
@@ -17,7 +16,6 @@ export default function LoginPage() {
 
   async function handleLogin(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
     setError('');
 
     if (!email.trim() || !password) {
@@ -46,6 +44,7 @@ export default function LoginPage() {
     <main className="min-h-screen bg-[#f7f8fc] text-[#101828]">
       <div className="flex min-h-screen items-center justify-center px-5 py-10">
         <div className="w-full max-w-md">
+
           {/* BRAND */}
           <div className="mb-8 text-center">
             <Link href="/" className="inline-flex items-center gap-3">
@@ -67,6 +66,7 @@ export default function LoginPage() {
 
           {/* CARD */}
           <div className="rounded-[32px] border border-black/[0.05] bg-white p-6 shadow-xl shadow-black/[0.04] sm:p-8">
+
             <div className="mb-7">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-gray-400">
                 Welcome back
@@ -77,12 +77,12 @@ export default function LoginPage() {
               </h1>
 
               <p className="mt-2 text-sm leading-6 text-gray-500">
-                Access your purchases, warranties, documents and consumer
-                cases.
+                Access your purchases, warranties, documents and consumer cases.
               </p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-5">
+
               {/* EMAIL */}
               <div>
                 <label
@@ -99,13 +99,15 @@ export default function LoginPage() {
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   placeholder="you@example.com"
-                  className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-sm outline-none transition focus:border-gray-900 focus:bg-white focus:ring-4 focus:ring-gray-900/5"
+                  disabled={loading}
+                  className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-sm outline-none transition focus:border-gray-900 focus:bg-white focus:ring-4 focus:ring-gray-900/5 disabled:cursor-not-allowed disabled:opacity-60"
                 />
               </div>
 
               {/* PASSWORD */}
               <div>
                 <div className="mb-2 flex items-center justify-between">
+
                   <label
                     htmlFor="password"
                     className="block text-xs font-bold text-gray-500"
@@ -113,20 +115,17 @@ export default function LoginPage() {
                     PASSWORD
                   </label>
 
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setError(
-                        'Password reset will be connected in the next authentication step.'
-                      );
-                    }}
+                  <Link
+                    href="/forgot-password"
                     className="text-xs font-semibold text-gray-500 hover:text-gray-900"
                   >
                     Forgot password?
-                  </button>
+                  </Link>
+
                 </div>
 
                 <div className="relative">
+
                   <input
                     id="password"
                     type={showPassword ? 'text' : 'password'}
@@ -134,16 +133,20 @@ export default function LoginPage() {
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
                     placeholder="Enter your password"
-                    className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3.5 pr-20 text-sm outline-none transition focus:border-gray-900 focus:bg-white focus:ring-4 focus:ring-gray-900/5"
+                    disabled={loading}
+                    className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3.5 pr-20 text-sm outline-none transition focus:border-gray-900 focus:bg-white focus:ring-4 focus:ring-gray-900/5 disabled:cursor-not-allowed disabled:opacity-60"
                   />
 
                   <button
                     type="button"
-                    onClick={() => setShowPassword((current) => !current)}
+                    onClick={() =>
+                      setShowPassword((current) => !current)
+                    }
                     className="absolute right-3 top-1/2 -translate-y-1/2 rounded-xl px-2 py-1 text-xs font-semibold text-gray-400 hover:bg-gray-100 hover:text-gray-700"
                   >
                     {showPassword ? 'Hide' : 'Show'}
                   </button>
+
                 </div>
               </div>
 
@@ -154,7 +157,7 @@ export default function LoginPage() {
                 </div>
               )}
 
-              {/* LOGIN */}
+              {/* LOGIN BUTTON */}
               <button
                 type="submit"
                 disabled={loading}
@@ -162,15 +165,20 @@ export default function LoginPage() {
               >
                 {loading ? 'Signing in...' : 'Sign in →'}
               </button>
+
             </form>
 
             {/* DIVIDER */}
             <div className="my-6 flex items-center gap-3">
+
               <div className="h-px flex-1 bg-gray-100" />
+
               <span className="text-[10px] font-bold uppercase tracking-wider text-gray-300">
                 New to Protectly?
               </span>
+
               <div className="h-px flex-1 bg-gray-100" />
+
             </div>
 
             {/* SIGNUP */}
@@ -180,6 +188,7 @@ export default function LoginPage() {
             >
               Create an account
             </Link>
+
           </div>
 
           {/* TRUST */}
@@ -188,9 +197,9 @@ export default function LoginPage() {
             <span>📄 Private documents</span>
             <span>🛡️ Consumer protection</span>
           </div>
+
         </div>
       </div>
     </main>
   );
 }
-```

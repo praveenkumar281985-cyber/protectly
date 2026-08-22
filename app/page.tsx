@@ -227,13 +227,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#f6f7f9] text-[#111827]">
-
       <header className="sticky top-0 z-30 border-b border-black/[0.05] bg-white/90 backdrop-blur-xl">
-
         <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
-
           <div className="flex items-center gap-2.5">
-
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#111827] text-base text-white shadow-sm">
               🛡️
             </div>
@@ -247,11 +243,9 @@ export default function Home() {
                 CONSUMER PROTECTION
               </div>
             </div>
-
           </div>
 
           <div className="relative">
-
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -262,7 +256,6 @@ export default function Home() {
 
             {menuOpen && (
               <div className="absolute right-0 top-11 w-44 rounded-2xl border border-black/[0.06] bg-white p-1.5 shadow-xl">
-
                 <button className="w-full rounded-xl px-3 py-2.5 text-left text-[13px] hover:bg-gray-50">
                   Account
                 </button>
@@ -274,24 +267,16 @@ export default function Home() {
                 <button className="w-full rounded-xl px-3 py-2.5 text-left text-[13px] hover:bg-gray-50">
                   Sign out
                 </button>
-
               </div>
             )}
-
           </div>
-
         </div>
-
       </header>
 
       <div className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6 sm:py-8">
-
         <section className="mb-6">
-
           <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-
             <div>
-
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-gray-400">
                 Your protection
               </p>
@@ -309,7 +294,6 @@ export default function Home() {
                 consumer cases — all protected in one
                 place.
               </p>
-
             </div>
 
             <button
@@ -320,18 +304,13 @@ export default function Home() {
               <span className="text-lg leading-none">
                 +
               </span>
-
               Protect a purchase
             </button>
-
           </div>
-
         </section>
 
         <section className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-
           <div className="rounded-2xl border border-black/[0.05] bg-white p-4 shadow-sm">
-
             <p className="text-[11px] font-medium text-gray-500">
               Protected value
             </p>
@@ -343,11 +322,9 @@ export default function Home() {
             <p className="mt-1 text-[10px] text-gray-400">
               {purchases.length} purchases
             </p>
-
           </div>
 
           <div className="rounded-2xl border border-black/[0.05] bg-white p-4 shadow-sm">
-
             <p className="text-[11px] font-medium text-gray-500">
               Warranties
             </p>
@@ -359,11 +336,9 @@ export default function Home() {
             <p className="mt-1 text-[10px] text-gray-400">
               Active protection
             </p>
-
           </div>
 
           <div className="col-span-2 rounded-2xl border border-black/[0.05] bg-white p-4 shadow-sm sm:col-span-1">
-
             <p className="text-[11px] font-medium text-gray-500">
               Open cases
             </p>
@@ -375,23 +350,17 @@ export default function Home() {
             <p className="mt-1 text-[10px] text-gray-400">
               Needs attention
             </p>
-
           </div>
-
         </section>
 
         <section className="mt-5 space-y-3">
-
           <div className="rounded-2xl border border-orange-100 bg-orange-50 p-4">
-
             <div className="flex items-start gap-3">
-
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-100">
                 ⚠️
               </div>
 
               <div className="min-w-0 flex-1">
-
                 <p className="text-[9px] font-bold uppercase tracking-wider text-orange-500">
                   Attention
                 </p>
@@ -403,27 +372,21 @@ export default function Home() {
                 <p className="mt-1 text-[11px] text-gray-500">
                   Samsung Smart TV · expires in 21 days.
                 </p>
-
               </div>
 
               <button className="shrink-0 rounded-lg bg-white px-3 py-2 text-[10px] font-bold shadow-sm">
                 View
               </button>
-
             </div>
-
           </div>
 
           <div className="rounded-2xl border border-red-100 bg-red-50 p-4">
-
             <div className="flex items-start gap-3">
-
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-100">
                 🔴
               </div>
 
               <div className="min-w-0 flex-1">
-
                 <p className="text-[9px] font-bold uppercase tracking-wider text-red-500">
                   Action required
                 </p>
@@ -435,25 +398,18 @@ export default function Home() {
                 <p className="mt-1 text-[11px] text-gray-500">
                   Amazon Refund · ₹8,499 · 6 days
                 </p>
-
               </div>
 
               <button className="shrink-0 rounded-lg bg-[#111827] px-3 py-2 text-[10px] font-bold text-white">
                 Continue
               </button>
-
             </div>
-
           </div>
-
         </section>
 
         <section className="mt-7">
-
           <div className="mb-3 flex items-end justify-between">
-
             <div>
-
               <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-gray-400">
                 Your purchases
               </p>
@@ -461,26 +417,20 @@ export default function Home() {
               <h2 className="mt-1 text-[17px] font-bold tracking-tight">
                 Protected purchases
               </h2>
-
             </div>
 
             <button className="text-[11px] font-semibold text-gray-500">
               View all →
             </button>
-
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-
             {purchases.map((purchase) => (
-
               <div
                 key={purchase.id}
                 className="rounded-2xl border border-black/[0.05] bg-white p-4 shadow-sm transition hover:shadow-md"
               >
-
                 <div className="flex items-start justify-between">
-
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-50 text-xl">
                     {purchase.icon}
                   </div>
@@ -488,11 +438,9 @@ export default function Home() {
                   <button className="rounded-lg px-2 py-1 text-gray-400 hover:bg-gray-50">
                     •••
                   </button>
-
                 </div>
 
                 <div className="mt-4">
-
                   <p className="text-[13px] font-bold">
                     {purchase.name}
                   </p>
@@ -500,13 +448,10 @@ export default function Home() {
                   <p className="mt-0.5 text-[10px] text-gray-400">
                     {purchase.category}
                   </p>
-
                 </div>
 
                 <div className="mt-4 flex items-end justify-between gap-3">
-
                   <div>
-
                     <p className="text-[15px] font-bold">
                       {formatCurrency(purchase.price)}
                     </p>
@@ -514,7 +459,6 @@ export default function Home() {
                     <p className="mt-0.5 text-[9px] text-gray-400">
                       {purchase.meta}
                     </p>
-
                   </div>
 
                   <span
@@ -529,19 +473,13 @@ export default function Home() {
                   >
                     {purchase.status}
                   </span>
-
                 </div>
-
               </div>
-
             ))}
-
           </div>
-
         </section>
 
         <section className="mt-7 rounded-2xl bg-[#111827] p-5 text-white">
-
           <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-gray-400">
             Consumer protection
           </p>
@@ -557,44 +495,33 @@ export default function Home() {
 
           <div className="mt-4 flex flex-wrap gap-3 text-[9px] text-gray-400">
             <span>🔒 Secure storage</span>
-            <span>•</span>
             <span>📄 Private documents</span>
-            <span>•</span>
             <span>🛡️ Protected</span>
           </div>
-
         </section>
-
       </div>
 
       {showPurchaseModal && (
-
         <div
           className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-0 backdrop-blur-sm sm:items-center sm:p-4"
           onClick={closePurchaseModal}
         >
-
           <div
             className="flex max-h-[92vh] w-full max-w-lg flex-col overflow-hidden rounded-t-[28px] bg-white shadow-[0_-10px_60px_rgba(0,0,0,0.25)] sm:max-h-[88vh] sm:rounded-[26px]"
             onClick={(event) =>
               event.stopPropagation()
             }
           >
-
             <div className="shrink-0 border-b border-black/[0.06] px-5 pb-4 pt-3">
-
               <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-gray-200 sm:hidden" />
 
               <div className="flex items-center justify-between">
-
                 <div className="flex items-center gap-3">
-
                   <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#111827] text-base text-white">
                     🛡️
                   </div>
 
                   <div>
-
                     <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-gray-400">
                       Purchase protection
                     </p>
@@ -602,9 +529,7 @@ export default function Home() {
                     <h2 className="text-[18px] font-bold tracking-tight">
                       Protect a purchase
                     </h2>
-
                   </div>
-
                 </div>
 
                 <button
@@ -614,19 +539,13 @@ export default function Home() {
                 >
                   ✕
                 </button>
-
               </div>
-
             </div>
 
             <div className="overflow-y-auto px-5 py-5">
-
               {!purchaseMethod && (
-
                 <>
-
                   <div className="mb-4">
-
                     <h3 className="text-[14px] font-bold">
                       How would you like to add it?
                     </h3>
@@ -634,11 +553,9 @@ export default function Home() {
                     <p className="mt-1 text-[11px] leading-5 text-gray-400">
                       Choose the fastest way to protect your purchase.
                     </p>
-
                   </div>
 
                   <div className="space-y-3">
-
                     <button
                       type="button"
                       onClick={() =>
@@ -646,13 +563,11 @@ export default function Home() {
                       }
                       className="flex w-full items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-4 text-left transition active:scale-[0.99] hover:border-gray-300 hover:bg-white"
                     >
-
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-xl">
                         📄
                       </div>
 
                       <div className="min-w-0 flex-1">
-
                         <p className="text-[13px] font-bold">
                           Upload invoice
                         </p>
@@ -660,13 +575,11 @@ export default function Home() {
                         <p className="mt-1 text-[10px] leading-4 text-gray-500">
                           AI extracts product, price, seller and dates.
                         </p>
-
                       </div>
 
                       <span className="text-gray-300">
                         →
                       </span>
-
                     </button>
 
                     <button
@@ -676,13 +589,11 @@ export default function Home() {
                       }
                       className="flex w-full items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-4 text-left transition active:scale-[0.99] hover:border-gray-300 hover:bg-white"
                     >
-
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-50 text-xl">
                         ✍️
                       </div>
 
                       <div className="min-w-0 flex-1">
-
                         <p className="text-[13px] font-bold">
                           Add manually
                         </p>
@@ -690,15 +601,12 @@ export default function Home() {
                         <p className="mt-1 text-[10px] leading-4 text-gray-500">
                           Enter purchase details yourself.
                         </p>
-
                       </div>
 
                       <span className="text-gray-300">
                         →
                       </span>
-
                     </button>
-
                   </div>
 
                   <div className="mt-5 flex justify-center gap-4 text-[9px] text-gray-400">
@@ -708,15 +616,11 @@ export default function Home() {
                     <span>•</span>
                     <span>🛡️ Protected</span>
                   </div>
-
                 </>
-
               )}
 
               {purchaseMethod === 'invoice' && (
-
                 <>
-
                   <button
                     type="button"
                     onClick={() => {
@@ -729,7 +633,6 @@ export default function Home() {
                   </button>
 
                   <div>
-
                     <h3 className="text-[15px] font-bold">
                       Upload your invoice
                     </h3>
@@ -737,11 +640,9 @@ export default function Home() {
                     <p className="mt-1 text-[11px] text-gray-500">
                       PDF, JPG or PNG.
                     </p>
-
                   </div>
 
                   <label className="mt-5 flex min-h-40 cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50 px-5 text-center transition hover:border-gray-400 hover:bg-white">
-
                     <input
                       type="file"
                       accept=".pdf,.jpg,.jpeg,.png"
@@ -750,7 +651,6 @@ export default function Home() {
                     />
 
                     {invoice ? (
-
                       <>
                         <div className="text-3xl">
                           📄
@@ -768,9 +668,7 @@ export default function Home() {
                           Tap to replace
                         </p>
                       </>
-
                     ) : (
-
                       <>
                         <div className="text-3xl">
                           ☁️
@@ -784,13 +682,10 @@ export default function Home() {
                           PDF, JPG or PNG
                         </p>
                       </>
-
                     )}
-
                   </label>
 
                   {invoice && (
-
                     <button
                       type="button"
                       onClick={() =>
@@ -802,17 +697,12 @@ export default function Home() {
                     >
                       Continue with invoice →
                     </button>
-
                   )}
-
                 </>
-
               )}
 
               {purchaseMethod === 'manual' && (
-
                 <>
-
                   <button
                     type="button"
                     onClick={() => {
@@ -825,7 +715,6 @@ export default function Home() {
                   </button>
 
                   <div className="mb-4">
-
                     <h3 className="text-[15px] font-bold">
                       Add purchase details
                     </h3>
@@ -833,13 +722,10 @@ export default function Home() {
                     <p className="mt-1 text-[10px] text-gray-500">
                       Enter the basic information.
                     </p>
-
                   </div>
 
                   <div className="space-y-3">
-
                     <div>
-
                       <label className="mb-1.5 block text-[9px] font-bold tracking-wide text-gray-500">
                         PRODUCT NAME
                       </label>
@@ -856,13 +742,10 @@ export default function Home() {
                         placeholder="Samsung Smart TV"
                         className="w-full rounded-xl border border-gray-200 bg-gray-50 px-3.5 py-3 text-[12px] outline-none focus:border-gray-900 focus:bg-white"
                       />
-
                     </div>
 
                     <div className="grid grid-cols-2 gap-3">
-
                       <div>
-
                         <label className="mb-1.5 block text-[9px] font-bold tracking-wide text-gray-500">
                           CATEGORY
                         </label>
@@ -877,7 +760,6 @@ export default function Home() {
                           }
                           className="w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-3 text-[11px] outline-none focus:border-gray-900 focus:bg-white"
                         >
-
                           {categories.map(
                             (category) => (
                               <option
@@ -887,19 +769,15 @@ export default function Home() {
                               </option>
                             )
                           )}
-
                         </select>
-
                       </div>
 
                       <div>
-
                         <label className="mb-1.5 block text-[9px] font-bold tracking-wide text-gray-500">
                           PRICE
                         </label>
 
                         <div className="relative">
-
                           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[11px] text-gray-400">
                             ₹
                           </span>
@@ -917,15 +795,11 @@ export default function Home() {
                             placeholder="45000"
                             className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-7 pr-3 text-[11px] outline-none focus:border-gray-900 focus:bg-white"
                           />
-
                         </div>
-
                       </div>
-
                     </div>
 
                     <div>
-
                       <label className="mb-1.5 block text-[9px] font-bold tracking-wide text-gray-500">
                         PURCHASE DATE
                       </label>
@@ -941,11 +815,9 @@ export default function Home() {
                         }
                         className="w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-3 text-[11px] outline-none focus:border-gray-900 focus:bg-white"
                       />
-
                     </div>
 
                     <div>
-
                       <label className="mb-1.5 block text-[9px] font-bold tracking-wide text-gray-500">
                         SELLER / STORE
                       </label>
@@ -961,13 +833,10 @@ export default function Home() {
                         placeholder="Amazon"
                         className="w-full rounded-xl border border-gray-200 bg-gray-50 px-3.5 py-3 text-[11px] outline-none focus:border-gray-900 focus:bg-white"
                       />
-
                     </div>
 
                     <div className="grid grid-cols-2 gap-3">
-
                       <div>
-
                         <label className="mb-1.5 block text-[9px] font-bold tracking-wide text-gray-500">
                           WARRANTY
                         </label>
@@ -982,7 +851,6 @@ export default function Home() {
                           }
                           className="w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-3 text-[11px] outline-none focus:border-gray-900 focus:bg-white"
                         >
-
                           {warrantyOptions.map(
                             (option) => (
                               <option key={option}>
@@ -990,13 +858,10 @@ export default function Home() {
                               </option>
                             )
                           )}
-
                         </select>
-
                       </div>
 
                       <div>
-
                         <label className="mb-1.5 block text-[9px] font-bold tracking-wide text-gray-500">
                           RETURN WINDOW
                         </label>
@@ -1011,7 +876,6 @@ export default function Home() {
                           }
                           className="w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-3 text-[11px] outline-none focus:border-gray-900 focus:bg-white"
                         >
-
                           {returnOptions.map(
                             (option) => (
                               <option key={option}>
@@ -1019,21 +883,15 @@ export default function Home() {
                               </option>
                             )
                           )}
-
                         </select>
-
                       </div>
-
                     </div>
-
                   </div>
 
                   {error && (
-
                     <div className="mt-3 rounded-xl border border-red-100 bg-red-50 px-3 py-2.5 text-[10px] font-medium text-red-600">
                       {error}
                     </div>
-
                   )}
 
                   <button
@@ -1043,19 +901,12 @@ export default function Home() {
                   >
                     Protect this purchase →
                   </button>
-
                 </>
-
               )}
-
             </div>
-
           </div>
-
         </div>
-
       )}
-
     </main>
   );
 }
